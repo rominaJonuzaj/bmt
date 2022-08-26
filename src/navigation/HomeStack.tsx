@@ -5,6 +5,7 @@ import {
   PROFILE_SCREEN,
   RESOURCES_SCREEN,
   SETTINGS_SCREEN,
+  SURVEY_SCREEN,
 } from "./screenNames";
 //import Metrics from "../screens/metrics/Metrics";
 import { HomeStackParamList } from "../../types";
@@ -45,6 +46,7 @@ import SettingsScreen from "../screens/settingsScreen/SettingsScreen";
 // import ProfileScreen from "../screens/profile/ProfileScreen";
 // import InAppNotifications from "../screens/inAppNotifications/InAppNotifications";
 import { Image } from "react-native";
+import Survey from "../screens/surveys/Survey";
 
 const HomeStack = createDrawerNavigator<HomeStackParamList>();
 
@@ -55,7 +57,7 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
         headerStyle: styles.headerStyle,
         drawerStyle: styles.drawerStyle,
         headerTitleAlign: "center",
-        headerTintColor: COLORS.DREAMSICLE500,
+        headerTintColor: COLORS.WHITE,
         headerTitleStyle: styles.headerTitle,
         sceneContainerStyle: styles.container,
         // headerRight: () => <NotificationsIcon navigation={navigation} />,
@@ -65,7 +67,7 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
     >
       <HomeStack.Screen
         options={{
-          headerTitle: () => <Image style={styles.image} source={require("../../assets/images/me.jpg")} />,
+          headerTitle: () => <Image style={styles.image} source={require("../../assets/images/logo.png")} />,
         }}
         name={HOME_SCREEN}
         component={HomeScreen}
@@ -126,15 +128,15 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
         name={SUBMIT_SURVEY}
         component={SubmittedSurvey}
       /> */}
-      {/* <HomeStack.Screen
+      <HomeStack.Screen
         options={{
           title: "Surveys",
           headerTitleStyle: styles.customHeaderTitle,
-          headerLeft: () => <BackButton screenName={ALL_SURVEYS} navigation={navigation} />,
+          headerLeft: () => <BackButton screenName={HOME_SCREEN} navigation={navigation} />,
         }}
-        name={SURVEY}
+        name={SURVEY_SCREEN}
         component={Survey}
-      /> */}
+      />
       {/* <HomeStack.Screen
         options={{ title: "Surveys", headerTitleStyle: styles.customHeaderTitle }}
         name={ADD_SURVEY}

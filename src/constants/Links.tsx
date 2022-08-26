@@ -1,12 +1,8 @@
-import { HOLIDAYS_LIST_URI } from "./SourceImages";
-
 const Links = {
-  BigTime: "https://iq.bigtime.net/",
-  EmployeeNavigator: "https://www.employeenavigator.com/employee/Home",
-  Gusto: "https://app.gusto.com/",
-  Guideline: "https://my.guideline.com/",
-  Sharepoint: "https://hubbardstate.sharepoint.com/",
-  Holidays: HOLIDAYS_LIST_URI,
+  CrisisHotline: "https://blog.opencounseling.com/suicide-hotlines/",
+  BipolarFocusedTherapy: "https://www.betterhelp.com/get-started/?transaction_id=10211aec244239c49aab0699b243b0&utm_source=affiliate&utm_campaign=474&utm_medium=iOS&utm_content=&utm_term=i1&not_found=1&gor=start-go",
+  BipolarInformation: "https://www.dbsalliance.org/education/bipolar-disorder/",
+  Meditate: "http://www.pixelthoughts.co/",
 };
 
 export default Links;
