@@ -29,13 +29,13 @@ const ProfileScreen = () => {
           {/* <Text style={styles.text}>{practiceAndMarket}</Text>
           <Text style={styles.text}>{role}</Text> */}
           <View style={styles.row}>
-            <Email style={styles.smallImage} />
+            {/* <Email style={styles.smallImage} /> */}
             {/* <Text style={styles.text}>{email}</Text> */}
           </View>
         </View>
       </View>
       <View style={styles.buttonView}>
-        {/* <CustomButton onPress={logoutUser} title="Sign Out" color={COLORS.PAPASMURF500} /> */}
+        <CustomButton onPress={null} title="Sign Out" color={COLORS.PAPASMURF500} />
       </View>
     </Container>
   );

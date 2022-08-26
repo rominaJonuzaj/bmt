@@ -23,7 +23,7 @@ export default StyleSheet.create({
     fontFamily: "epilogue-bold",
   },
   customHeaderTitle: {
-    color: COLORS.DREAMSICLE500,
+    color: COLORS.WHITE,
     fontSize: 20,
     lineHeight: 43,
     letterSpacing: 1.2,

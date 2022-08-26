@@ -8,6 +8,7 @@ import {
  TERMS_AND_CONDITIONS,
  RESOURCES_SCREEN,
  SETTINGS_SCREEN,
+ SURVEY_SCREEN,
 } from "./src/navigation/screenNames";
 
 export type RootStackParamList = {
@@ -39,5 +40,6 @@ export type HomeStackParamList = {
   [PROFILE_SCREEN]: undefined;
   [RESOURCES_SCREEN]: undefined;
   [SETTINGS_SCREEN]: undefined;
+  [SURVEY_SCREEN]: undefined;
 
 };

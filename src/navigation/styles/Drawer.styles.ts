@@ -11,7 +11,7 @@ export default StyleSheet.create({
     paddingLeft: 10,
   },
   label: {
-    color: COLORS.WHITE,
+    color: COLORS.DARK_PURPLE,
     fontWeight: "700",
     fontSize: 24,
     letterSpacing: 1.1,
@@ -20,39 +20,39 @@ export default StyleSheet.create({
     fontFamily: "epilogue-bold",
   },
   customLabel: {
-    color: COLORS.WHITE,
+    color: COLORS.DARK_PURPLE,
     fontWeight: "700",
-    fontSize: 14,
+    fontSize: 24,
     textAlign: "left",
     marginLeft: -15,
   },
   backgroundImages: {
     resizeMode: "cover",
     alignSelf: "flex-end",
-    opacity: 0.25,
+    opacity: 0.60,
   },
   feedBackgroundImage: {
-    backgroundColor: COLORS.PAPASMURF800,
+    backgroundColor: COLORS.WHITE,
   },
   metricsBackgroundImage: {
-    backgroundColor: COLORS.PAPASMURF700,
+    backgroundColor: COLORS.WHITE,
   },
   resourcesBackgroundImage: {
-    backgroundColor: COLORS.PAPASMURF600,
+    backgroundColor: COLORS.WHITE,
   },
   peopleBackgroundImage: {
-    backgroundColor: COLORS.PAPASMURF500,
+    backgroundColor: COLORS.WHITE,
   },
   surveyBackgroundImage: {
-    backgroundColor: COLORS.PAPASMURF400,
+    backgroundColor: COLORS.WHITE,
   },
   teamBackgroundImage: {
-    backgroundColor: COLORS.PAPASMURF300,
+    backgroundColor: COLORS.WHITE,
   },
-  rowNavItems: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-  },
+  // rowNavItems: {
+  //   flexDirection: "row",
+  //   flexWrap: "wrap",
+  // },
   columnNavItem: {
     flexBasis: "50%",
   },
