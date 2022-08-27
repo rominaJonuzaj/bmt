@@ -130,7 +130,7 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
       /> */}
       <HomeStack.Screen
         options={{
-          title: "Surveys",
+          title: "Today's Data",
           headerTitleStyle: styles.customHeaderTitle,
           headerLeft: () => <BackButton screenName={HOME_SCREEN} navigation={navigation} />,
         }}
