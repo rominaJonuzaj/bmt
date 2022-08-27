@@ -1,17 +1,17 @@
-// import React from "react";
-// import AppLoading from "expo-app-loading";
-// import SplashScreen from "../components/splashscreen/SplashScreen";
+import React from "react";
+import AppLoading from "expo-app-loading";
+import SplashScreen from "../components/splashscreen/SplashScreen";
 
-// function AnimatedAppLoader({ children }) {
-//   const [isSplashReady, setSplashReady] = React.useState(false);
+function AnimatedAppLoader({ children }) {
+  const [isSplashReady, setSplashReady] = React.useState(false);
 
-//   const onFinish = React.useMemo(() => setSplashReady(true), []);
+  const onFinish = React.useMemo(() => setSplashReady(true), []);
 
-//   if (!isSplashReady) {
-//     return <AppLoading autoHideSplash={false} onError={console.error} onFinish={onFinish} />;
-//   }
+  if (!isSplashReady) {
+    return <AppLoading autoHideSplash={false} onError={console.error} onFinish={onFinish} />;
+  }
 
-//   return <SplashScreen>{children}</SplashScreen>;
-// }
+  return <SplashScreen>{children}</SplashScreen>;
+}
 
-// export default AnimatedAppLoader;
+export default AnimatedAppLoader;

@@ -2,16 +2,15 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../../constants/Colors";
 
 export default StyleSheet.create({
-  spinner: {
+  animation: {
     flex: 1,
-    alignSelf: "center",
-    width: "100%",
-    bottom: 20,
+    alignSelf: "flex-start",
+    width: "80%",
   },
   text: {
     fontSize: 16,
-    alignSelf: "center",
-    top: "63%",
+    alignSelf: "flex-end",
+    top: "10%",
     color: COLORS.WHITE,
   },
 });

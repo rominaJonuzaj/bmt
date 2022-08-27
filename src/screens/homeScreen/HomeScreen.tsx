@@ -7,6 +7,7 @@ import Survey from "../surveys/Survey";
 import CustomButton from "../../components/buttons/CustomButton";
 import { COLORS } from "../../constants/Colors";
 import { SURVEY_SCREEN } from "../../navigation/screenNames";
+import HealthAnimation from "../../components/healthAnimation/HealthAnimation";
 
 const HomeScreen = (props: any) => {
   //const client = useContext(GraphqlClientContext);
@@ -17,6 +18,7 @@ const HomeScreen = (props: any) => {
       <View style={styles.buttonView}>
         <CustomButton onPress={() => props.navigation.navigate(SURVEY_SCREEN)} title="How was your day?" color={COLORS.FADED_BLUE} />
       </View>
+      <HealthAnimation/>
     </Container>
   );
 };

@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     alignItems: "center",
     flexDirection: "column",
-    marginTop: "10%",
+    marginTop: "5%",
   },
   button: {
     width: "90%",

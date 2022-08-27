@@ -10,7 +10,6 @@ const HomeScreen = () => {
 
   return (
     <Container style={styles.container}>
-      {/* <View><Text>{"RESOURCE SCREEN"}</Text></View> */}
       <QuickLinks/>
     </Container>
   );
