@@ -7,8 +7,8 @@
  import { createStackNavigator } from "@react-navigation/stack";
  import * as React from "react";
  import { ColorSchemeName } from "react-native";
- //import SignIn from "../screens/authScreens/SignIn";
- //import AnimatedAppLoader from "../components/AnimatedAppLoader";
+ import SignIn from "../screens/authScreens/SignIn";
+ import AnimatedAppLoader from "../components/AnimatedAppLoader";
  import NotFoundScreen from "../screens/authScreens/NotFoundScreen";
  import { AuthStackParamList, RootStackParamList } from "../../types";
  import HomeStackNav from "./HomeStack";
@@ -22,7 +22,7 @@ import HomeScreen from "../screens/homeScreen/HomeScreen";
  
    return (
      <NavigationContainer theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-       {/* <AnimatedAppLoader> */}
+       <AnimatedAppLoader>
          {true ? (
            true ? (
              <RootNavigator />
@@ -32,7 +32,7 @@ import HomeScreen from "../screens/homeScreen/HomeScreen";
          ) : (
            <AuthStackNavigator />
          )}
-       {/* </AnimatedAppLoader> */}
+       </AnimatedAppLoader>
      </NavigationContainer>
    );
  }

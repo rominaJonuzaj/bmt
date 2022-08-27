@@ -18,7 +18,6 @@ const SplashScreen = ({ children }) => {
   return (
     <View style={styles.splashscreen}>
       {isAppReady && children}
-
       {!isAppReady && (
         <LottieView
           ref={lottieRef}
@@ -27,7 +26,7 @@ const SplashScreen = ({ children }) => {
           onAnimationFinish={() => {
             if (Platform.OS === "ios") {
               count += 1;
-              if (count === 2) {
+              if (count === 1) {
                 setAppReady(true);
               }
             } else {
