@@ -6,6 +6,27 @@ export default StyleSheet.create({
     paddingVertical: 20,
     paddingLeft: 20,
   },
+  animation: {
+    flex: 1,
+    top: "22%",
+    height: 150,
+  },
+  animationAndroid: {
+    flex: 1,
+    height: 150,
+  },
+  textAndroid: {
+    fontSize: 16,
+    alignSelf: "center",
+    top: 15,
+    color: COLORS.WHITE,
+  },
+  text: {
+    fontSize: 16,
+    alignSelf: "center",
+    top: 150,
+    color: COLORS.WHITE,
+  },
   arrowLeft: {
     paddingVertical: 15,
     paddingLeft: 10,
