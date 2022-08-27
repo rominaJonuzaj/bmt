@@ -13,7 +13,7 @@ const Container: React.FC<Props> = ({ children, coords, style }) => {
   return (
     <SafeAreaProvider>
       <LinearGradient
-        colors={[COLORS.DARK_PURPLE, COLORS.BLACK]}
+        colors={[COLORS.DARK_PURPLE, COLORS.LIGHT_BROWN]}
         start={coords ? coords : startCoords}
         style={[style, { height: "100%" }]}
       >

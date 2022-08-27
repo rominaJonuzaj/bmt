@@ -9,6 +9,7 @@ import Therapy from "../../../assets/svgIcons/Therapy";
 import Information from "../../../assets/svgIcons/Information";
 import Meditation from "../../../assets/svgIcons/Meditation";
 import { COLORS } from "../../constants/Colors";
+import HelpAnimation from "../../components/helpAnimation/HelpAnimation";
 
 const QuickLinks = () => {
   return (
@@ -41,6 +42,7 @@ const QuickLinks = () => {
           <Text style={styles.text}>Meditate</Text>
         </View>
       </TouchableOpacity>
+      <HelpAnimation/>
     </Container>
   );
 };
