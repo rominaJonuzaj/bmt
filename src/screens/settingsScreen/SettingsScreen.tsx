@@ -51,13 +51,38 @@ const SettingsScreen = () => {
     <Container>
       <View style={styles.container}>
         <View style={styles.switchContainer}>
-          <Text style={styles.TextTitle}>Weather & Time | Settings</Text>
-          {/* <SwitchButton
-            onClick={handleTemperatureSwitch}
-            isEnabled={switchButtons.isTemperaturePreferenceButtonEnabled}
-            label="Switch to Celsius"
-          />
+          <Text style={styles.TextTitle}>WHAT DO YOU WANT TO TURN OFF?</Text>
           <SwitchButton
+            onClick={null}
+            isEnabled={null}
+            label="Turn Off Negative Thoughts"
+          />
+           <SwitchButton
+            onClick={null}
+            isEnabled={null}
+            label="Turn Off Inttusive Thoughts"
+          />
+           <SwitchButton
+            onClick={null}
+            isEnabled={null}
+            label="Turn On Positive Thoughts"
+          />
+           <SwitchButton
+            onClick={null}
+            isEnabled={null}
+            label="Turn On: Love For Myself"
+          />
+           <SwitchButton
+            onClick={null}
+            isEnabled={null}
+            label="Turn On Good Mindset"
+          />
+           <SwitchButton
+            onClick={null}
+            isEnabled={null}
+            label="Turn Off Impulsive Triggers"
+          />
+          {/* <SwitchButton
             onClick={handleTimeFormatSwitch}
             isEnabled={switchButtons.isTimeFormatButtonEnabled}
             label="Switch to Military Time Format"

@@ -26,11 +26,15 @@ export default StyleSheet.create({
     paddingHorizontal: "5%",
     marginVertical: 20,
   },
+  questions: {
+    marginVertical: 10,
+  },
   buttonContainer: {
     flexDirection: "row",
     flexWrap: "nowrap",
     justifyContent: "space-around",
     marginTop: 20,
+    marginBottom: "100%",
   },
   h1: {
     fontSize: 22,

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, Linking } from "react-native";
+import { View, TouchableOpacity, Linking, Platform } from "react-native";
 import { Text } from "../../components/StyledText";
 import styles from "../resourcesScreen/QuickLinks.styles";
 import Links from "../../constants/Links";
@@ -42,7 +42,8 @@ const QuickLinks = () => {
           <Text style={styles.text}>Meditate</Text>
         </View>
       </TouchableOpacity>
-      <HelpAnimation/>
+      <View style={Platform.OS === "ios" ? styles.animation : styles.animationAndroid}>
+      <HelpAnimation/></View>
     </Container>
   );
 };

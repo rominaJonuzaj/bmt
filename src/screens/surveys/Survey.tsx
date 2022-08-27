@@ -13,16 +13,17 @@ import { Icon } from "react-native-elements/dist/icons/Icon";
 //import { FORMAT_DATE } from "../../helpers/convertTimeStampToDate";
 import { ANXIETY_MOOD, DEPRESSED_MOOD, ELEVATED_MOOD, HOURS_SLEEP, IRRITABILITY, NOTES, SHARE_FEEDBACK_TEXT } from "../../constants/Constants";
 import Container from "../../components/container/Container";
+import { HOME_SCREEN } from "../../navigation/screenNames";
 
 
-const Survey = () => {
+const Survey = (props: any) => {
   // const id = route.params.id;
   // const surveyName = route.params.surveyName;
   // const surveyType = route.params.surveyType;
   // const surveyClosingDate = route.params.closingDate;
   // const client = useContext(GraphqlClientContext);
   // const data = useCreateSurveyResponseMutation(client);
-  const trackMarks = Array.from({ length: 10 }, (_, i) => i + 1);
+  const trackMarks = Array.from({ length: 24 }, (_, i) => i + 1);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [surveyResponse, setSurveyResponse] = useState({
@@ -65,8 +66,9 @@ const Survey = () => {
   return (
     <Container style={styles.container}>
       <ScrollView>
-      <Divider color={COLORS.FOREST300} width={5} />
+      {/* <Divider color={COLORS.FOREST300} width={5} /> */}
       <View style={styles.surveyContainer}>
+        <View style={styles.questions}>
         <Text style={styles.text}>{ "1. " + HOURS_SLEEP}</Text>
         <View style={styles.sliderContainer}>
           <Text style={styles.value}>{trackMarks[0]}</Text>
@@ -93,8 +95,8 @@ const Survey = () => {
             keyboardType="number-pad"
           />
         </View>
-        {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
-
+        {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}</View>
+        <View style={styles.questions}>
         <Text style={styles.text}>{"2. " + DEPRESSED_MOOD}</Text>
         <View style={styles.sliderContainer}>
           <Text style={styles.value}>{trackMarks[0]}</Text>
@@ -122,7 +124,8 @@ const Survey = () => {
           />
         </View>
         {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
-
+</View> 
+<View style={styles.questions}>
         <Text style={styles.text}>{"3. " + ELEVATED_MOOD}</Text>
         <View style={styles.sliderContainer}>
           <Text style={styles.value}>{trackMarks[0]}</Text>
@@ -150,7 +153,8 @@ const Survey = () => {
           />
         </View>
         {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
-
+</View> 
+<View style={styles.questions}>
         <Text style={styles.text}>{"4. " + IRRITABILITY}</Text>
         <View style={styles.sliderContainer}>
           <Text style={styles.value}>{trackMarks[0]}</Text>
@@ -178,8 +182,9 @@ const Survey = () => {
           />
         </View>
         {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
-
-        <Text style={styles.text}>{"5. " + ANXIETY_MOOD}</Text>
+</View>
+<View style={styles.questions}>
+          <Text style={styles.text}>{"5. " + ANXIETY_MOOD}</Text>
         <View style={styles.sliderContainer}>
           <Text style={styles.value}>{trackMarks[0]}</Text>
           <Slider
@@ -206,7 +211,7 @@ const Survey = () => {
           />
         </View>
         {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
-
+</View>
         <ScrollView keyboardShouldPersistTaps="handled">
           <Text style={styles.text}>{"6. " + NOTES}</Text>
           <TextInput
@@ -235,7 +240,7 @@ const Survey = () => {
       <View style={styles.buttonContainer}>
         <CustomButton
           title="Cancel"
-          onPress={() => null}
+          onPress={() => props.navigation.navigate(HOME_SCREEN)}
           borderWidth={1}
           borderColor={COLORS.WHITE}
         />

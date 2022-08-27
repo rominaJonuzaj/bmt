@@ -8,7 +8,7 @@ import {
 import SocialProfileAvatar from "../../assets/svgIcons/SocialProfileAvatar";
 import ArrowLeft from "../../assets/svgIcons/ArrowLeft";
 //import PieChart from "../../assets/svgIcons/pieChart";
-import { ImageBackground, View } from "react-native";
+import { ImageBackground, View, Text, Platform } from "react-native";
 import ToolBox from "../../assets/svgIcons/ToolBox";
 import { TouchableOpacity } from "react-native";
 //import navImages from "../constants/NavImages";
@@ -19,6 +19,7 @@ import styles from "./styles/Drawer.styles";
 import React from "react";
 import Container from "../components/container/Container";
 import Home from "../../assets/svgIcons/Home";
+import HealthAnimation from "../components/healthAnimation/HealthAnimation";
 
 const Drawer = (props: any) => {
   return (
@@ -84,6 +85,9 @@ const Drawer = (props: any) => {
               />
             </ImageBackground>
           </View>
+           <Text style={Platform.OS === "ios" ? styles.text : styles.textAndroid}>Breathe In ... Breathe Out ...</Text>
+          <View style={Platform.OS === "ios" ? styles.animation : styles.animationAndroid}>
+          <HealthAnimation/></View>
         {/* </View> */}
       </DrawerContentScrollView>
     </Container>
