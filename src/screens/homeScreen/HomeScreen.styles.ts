@@ -4,12 +4,12 @@ import { COLORS } from "../../constants/Colors";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 10,
+    marginTop: "50%",
     justifyContent: "center",
     alignItems: "center",
   },
   buttonView: {
-    height: "20%",
+    height: "30%",
     width: "100%",
     justifyContent: "center",
     alignItems: "center",

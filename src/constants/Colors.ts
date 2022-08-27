@@ -31,6 +31,9 @@ const COLORS = {
   LIGHT_BLUE: "rgba(0, 42, 76, 0.75)",
   FADED_BLUE: "rgba(63, 142, 191, 0.5);",
   DARK_PURPLE: "#1C0D24",
+  DARK_BROWN: "#472D2D",
+  DEEP_BROWN: "#553939",
+  LIGHT_BROWN: "#A77979",
 };
 
 export default {

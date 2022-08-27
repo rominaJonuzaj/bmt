@@ -5,7 +5,4 @@ export default StyleSheet.create({
     flex: 1,
     marginTop: 10,
   },
-  holidays: {
-    bottom: 15,
-  },
 });
