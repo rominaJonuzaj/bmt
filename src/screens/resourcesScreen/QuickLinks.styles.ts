@@ -7,6 +7,13 @@ export default StyleSheet.create({
     flexDirection: "column",
     marginTop: "5%",
   },
+  animation: {
+    flex: 1,
+    width: "80%",
+  },
+  animationAndroid: {
+    flex: 1,
+  },
   button: {
     width: "90%",
     paddingVertical: "3%",
