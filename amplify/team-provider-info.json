@@ -10,6 +10,11 @@
       "StackName": "amplify-bmtapp-dev-183046",
       "StackId": "arn:aws:cloudformation:us-east-1:922220839598:stack/amplify-bmtapp-dev-183046/c6d4a510-26ee-11ed-8c12-12b765e3619f",
       "AmplifyAppId": "d3ciqt19oi5mkd"
+    },
+    "categories": {
+      "auth": {
+        "bmtappa05e3d48": {}
+      }
     }
   }
 }
