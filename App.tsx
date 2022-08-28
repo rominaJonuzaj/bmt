@@ -42,6 +42,10 @@ import useCachedResources from "./src/hooks/useCachedResources";
 import Navigation from "./src/navigation/index";
 import { RootSiblingParent } from "react-native-root-siblings";
 
+import { Amplify } from 'aws-amplify'
+import awsconfig from './src/aws-exports'
+Amplify.configure(awsconfig)
+
 // Amplify.configure(config);
 // const queryClient = new QueryClient();
 
