@@ -15,13 +15,13 @@ const authScreenLabels = {
     'Sign Up': 'Create new account',
     'Sign Up Account': 'Create a new account'
   },
-  al: {
+  sq: {
     'Sign Up': 'Regjistrohu',
     'Forgot Password': 'Harruat Fjalëkalimin?',
     'Sign In Account': 'Hyni në llogarinë tuaj',
     'Enter your email': 'Shënoni Email',
     'Enter your password': 'Shënoni Fjalëkalimin',
-    Password: 'Fjalëklaim',
+    'Password': 'Fjalëklaim',
     'Sign In': 'Hyni',
     'Please Sign In / Sign Up': 'Ju Lutem Hyni/Regjistorhuni',
     'Sign in to your account': 'Hyni në llogarinë tuaj',
@@ -30,7 +30,7 @@ const authScreenLabels = {
     'Confirm Sign Up': 'Konfirmoni Regjistrimin',
     'Resend code': 'Ridërgo Kodin',
     'Back to Sign In': 'Kthehuni në Sign In',
-    Confirm: 'Konfirmo',
+    'Confirm': 'Konfirmo',
     'Confirmation Code': 'Kodi për konfirmim',
     'Sign Out': 'Dil'
   }

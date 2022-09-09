@@ -75,11 +75,13 @@
 // export default withAuthenticator(App);
 
 import React from 'react'
-import { StatusBar } from 'react-native'
+import { StatusBar, useColorScheme } from 'react-native'
 import Amplify from '@aws-amplify/core'
 import { Authenticator } from 'aws-amplify-react-native'
 import awsconfig from './aws-exports'
-import { AmplifyTheme, Localei18n } from './src/components'
+import { Localei18n } from './src/components/Localei18n/index'
+import amplify from './src/components/AmplifyTheme/amplify'
+
 
 Amplify.configure({
   ...awsconfig,
@@ -109,11 +111,13 @@ const signUpConfig = {
 }
 
 const App = () => {
+
+  const colorScheme = useColorScheme();
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <Localei18n />
-      <Authenticator usernameAttributes="Email" signUpConfig={signUpConfig} theme={AmplifyTheme}/>
+      <Authenticator usernameAttributes="Email" signUpConfig={signUpConfig}/>
     </>
   )
 }
