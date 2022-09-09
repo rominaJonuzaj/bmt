@@ -78,7 +78,7 @@ import React from 'react'
 import { StatusBar } from 'react-native'
 import Amplify from '@aws-amplify/core'
 import { Authenticator } from 'aws-amplify-react-native'
-import awsconfig from './src/aws-exports'
+import awsconfig from './aws-exports'
 import { AmplifyTheme, Localei18n } from './src/components'
 
 Amplify.configure({

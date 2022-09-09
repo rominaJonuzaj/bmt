@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native'
+import { COLORS } from '../../constants/Colors'
 
-export const deepSquidInk = '#152939'
-export const linkUnderlayColor = '#FFF'
-export const errorIconColor = '#30d0fe'
 
 const AmplifyTheme = StyleSheet.create({
   container: {
@@ -24,7 +22,7 @@ const AmplifyTheme = StyleSheet.create({
     marginBottom: 32
   },
   sectionHeaderText: {
-    color: deepSquidInk,
+    color: COLORS.BLUE,
     fontSize: 20,
     fontWeight: '500'
   },
