@@ -11,6 +11,7 @@
   "dependencies": {
     "@miblanchard/react-native-slider": "^2.1.0",
     "@react-navigation/drawer": "^6.4.4",
+    "@react-navigation/native": "^6.0.12",
     "@react-navigation/stack": "^6.2.3",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
@@ -23,6 +24,7 @@
     "react": "18.0.0",
     "react-native": "0.69.5",
     "react-native-elements": "^3.4.2",
+    "react-native-gesture-handler": "^2.6.0",
     "react-native-reanimated": "~2.9.1",
     "react-native-root-siblings": "^4.1.1",
     "react-native-svg": "12.3.0",
