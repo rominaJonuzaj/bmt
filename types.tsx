@@ -17,7 +17,7 @@ export type RootStackParamList = {
 };
 
 export type AuthStackParamList = {
-  //[SIGN_IN]: undefined;
+  [HOME_SCREEN]: undefined;
   [TERMS_AND_CONDITIONS]: undefined;
 };
 

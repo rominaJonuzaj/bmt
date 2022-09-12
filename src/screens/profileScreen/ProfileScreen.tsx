@@ -1,7 +1,5 @@
-import { FontDisplay } from "expo-font";
-import React, { useContext } from "react";
-import { View, Image, Button, TouchableOpacity, Linking, Platform } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import React from "react";
+import { View, Image, TouchableOpacity, Linking, Platform } from "react-native";
 import Email from "../../../assets/svgIcons/Email";
 import Phone from "../../../assets/svgIcons/Phone";
 import CustomButton from "../../components/buttons/CustomButton";
@@ -9,14 +7,10 @@ import Container from "../../components/container/Container";
 import { Text } from "../../components/StyledText";
 import { COLORS } from "../../constants/Colors";
 // import IMAGES, { IMAGES_URI, PROFILE_IMAGE_URI } from "../../constants/SourceImages";
-// import { SecureStorageContext } from "../../contexts/SecureStorageContext";
-//import { UserContext } from "../../contexts/UserContext";
 import styles from "./ProfileScreen.styles";
 import { Auth } from 'aws-amplify';
 
 const ProfileScreen = () => {
-  //const { dispatch } = useContext(SecureStorageContext);
-  //const user = useContext(UserContext);
 
 //   const logoutUser = async () => {
 //     dispatch({ type: "DELETE_ALL_TOKENS" });
@@ -38,9 +32,7 @@ const signOut = async () => {
         {/* <Image source={{ uri: PROFILE_IMAGE_URI + email.toLowerCase() + ".jpg" }} style={styles.image} /> */}
         <Image source={require("../../../assets/images/me.jpg")} style={styles.image}/>
         <View style={Platform.OS === "ios" ? styles.infoContainer : styles.infoContainerAndroid}>
-          {/* <Text style={styles.text}>{practiceAndMarket}</Text>
-          <Text style={styles.text}>{role}</Text> */}
-          <Text style={styles.text}>{"Diagnose: Bipolar Level 2"}</Text>
+          <Text style={styles.text}>{"Diagnoza: Bipolar Level 2"}</Text>
           <View style={Platform.OS === "ios" ? styles.row : styles.rowAndroid}>
             <Email style={styles.smallImage} />
             {/* <Text style={styles.text}>{email}</Text> */}
@@ -57,7 +49,7 @@ const signOut = async () => {
         </View>
       </View>
       <View style={styles.buttonView}>
-        <CustomButton onPress={signOut} title="Sign Out" color={COLORS.DARK_PURPLE} />
+        <CustomButton onPress={signOut} title="Dil" color={COLORS.DARK_PURPLE} />
       </View>
     </Container>
   );

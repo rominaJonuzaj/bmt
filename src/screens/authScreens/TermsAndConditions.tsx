@@ -675,9 +675,6 @@ const TermsAndConditions = () => {
 
   return (
     <Container style={styles.container}>
-      {/* <View style={styles.holidays}>
-        <OfficeHolidays navigation={navigation} />
-      </View> */}
       <View><>"Hello"</></View>
     </Container>
   );
