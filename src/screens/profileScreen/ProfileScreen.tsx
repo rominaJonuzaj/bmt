@@ -12,6 +12,7 @@ import { COLORS } from "../../constants/Colors";
 // import { SecureStorageContext } from "../../contexts/SecureStorageContext";
 //import { UserContext } from "../../contexts/UserContext";
 import styles from "./ProfileScreen.styles";
+import { Auth } from 'aws-amplify';
 
 const ProfileScreen = () => {
   //const { dispatch } = useContext(SecureStorageContext);
@@ -20,6 +21,14 @@ const ProfileScreen = () => {
 //   const logoutUser = async () => {
 //     dispatch({ type: "DELETE_ALL_TOKENS" });
 //   };
+
+const signOut = async () => {
+  try {
+    await Auth.signOut({ global: true });
+  } catch (error) {
+    console.log('error signing out: ', error);
+  }
+};
 
 
   return (
@@ -48,7 +57,7 @@ const ProfileScreen = () => {
         </View>
       </View>
       <View style={styles.buttonView}>
-        <CustomButton onPress={null} title="Sign Out" color={COLORS.DARK_PURPLE} />
+        <CustomButton onPress={signOut} title="Sign Out" color={COLORS.DARK_PURPLE} />
       </View>
     </Container>
   );
