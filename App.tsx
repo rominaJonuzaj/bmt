@@ -44,6 +44,15 @@ import { RootSiblingParent } from "react-native-root-siblings";
 
 // Amplify.configure(config);
 // const queryClient = new QueryClient();
+import Amplify from 'aws-amplify';
+import config from "./src/aws-exports";
+
+Amplify.configure({
+  ...config,
+  Analytics: {
+    disabled: true,
+  },
+});
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
