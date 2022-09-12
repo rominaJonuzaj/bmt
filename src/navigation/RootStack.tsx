@@ -2,7 +2,6 @@ import React from "react";
 import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createStackNavigator } from "@react-navigation/stack";
-//import { SignInContext } from "../context/SignInContext";
 //import AuthStackNavigator from "./AuthStackNavigator";
 import { ColorSchemeName } from "react-native";
 import { RootStackParamList } from "../../types";
