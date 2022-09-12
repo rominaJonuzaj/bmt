@@ -18,7 +18,7 @@ const ProfileScreen = () => {
 
 const signOut = async () => {
   try {
-    await Auth.signOut({ global: true });
+    await Auth.signOut();
   } catch (error) {
     console.log('error signing out: ', error);
   }
@@ -49,7 +49,7 @@ const signOut = async () => {
         </View>
       </View>
       <View style={styles.buttonView}>
-        <CustomButton onPress={signOut} title="Dil" color={COLORS.DARK_PURPLE} />
+        <CustomButton onPress={signOut} title="Sign Out" color={COLORS.DARK_PURPLE} />
       </View>
     </Container>
   );
