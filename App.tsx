@@ -47,6 +47,7 @@ import { RootSiblingParent } from "react-native-root-siblings";
 import Amplify from 'aws-amplify';
 import config from "./src/aws-exports";
 import { withAuthenticator } from 'aws-amplify-react-native';
+import Localei18n from "./src/components/Language/Localei18n";
 
 Amplify.configure({
   ...config,
@@ -68,6 +69,7 @@ function App() {
           <UserProvider>
             <GraphqlClientProvider>
               <QueryClientProvider client={queryClient}> */}
+              <Localei18n />
                 <Navigation colorScheme={colorScheme} />
               {/* </QueryClientProvider>
             </GraphqlClientProvider>
