@@ -7,12 +7,9 @@ import {
 } from "./screenNames";
 import SocialProfileAvatar from "../../assets/svgIcons/SocialProfileAvatar";
 import ArrowLeft from "../../assets/svgIcons/ArrowLeft";
-//import PieChart from "../../assets/svgIcons/pieChart";
 import { ImageBackground, View, Text, Platform } from "react-native";
 import ToolBox from "../../assets/svgIcons/ToolBox";
 import { TouchableOpacity } from "react-native";
-//import navImages from "../constants/NavImages";
-import Feed from "../../assets/svgIcons/Feed";
 import { COLORS } from "../constants/Colors";
 import Cog from "../../assets/svgIcons/Cog";
 import styles from "./styles/Drawer.styles";
@@ -38,7 +35,7 @@ const Drawer = (props: any) => {
             onPress={() => props.navigation.navigate(HOME_SCREEN)}
             labelStyle={styles.label}
             style={styles.drawerItem}
-            label="Home / Feed"
+            label="Faqja Kryesore"
           />
         </ImageBackground>
         <ImageBackground
@@ -51,7 +48,7 @@ const Drawer = (props: any) => {
             onPress={() => props.navigation.navigate(RESOURCES_SCREEN)}
             labelStyle={styles.label}
             style={styles.drawerItem}
-            label="Resources"
+            label="Informacion"
           />
         </ImageBackground>
         {/* <View style={styles.rowNavItems}> */}
@@ -66,7 +63,7 @@ const Drawer = (props: any) => {
                 onPress={() => props.navigation.navigate(PROFILE_SCREEN)}
                 labelStyle={styles.customLabel}
                 style={styles.drawerItem}
-                label="Profile"
+                label="Profili Im"
               />
             </ImageBackground>
           </View>
@@ -81,11 +78,12 @@ const Drawer = (props: any) => {
                 onPress={() => props.navigation.navigate(SETTINGS_SCREEN)}
                 labelStyle={styles.customLabel}
                 style={styles.drawerItem}
-                label="Settings"
+                label="Cilësimet"
               />
             </ImageBackground>
           </View>
-           <Text style={Platform.OS === "ios" ? styles.text : styles.textAndroid}>Breathe In ... Breathe Out ...</Text>
+           {/* <Text style={Platform.OS === "ios" ? styles.text : styles.textAndroid}>Breathe In ... Breathe Out ...</Text> */}
+           <Text style={Platform.OS === "ios" ? styles.text : styles.textAndroid}>Merr Frymë ... Nxirr Frymë ...</Text>
           <View style={Platform.OS === "ios" ? styles.animation : styles.animationAndroid}>
           <HealthAnimation/></View>
         {/* </View> */}

@@ -218,7 +218,7 @@ const Survey = (props: any) => {
             multiline
             style={styles.input}
             onChangeText={(value) => setSurveyResponse({ ...surveyResponse, feedback: value })}
-            placeholder=" Type here"
+            placeholder=" Shkruaj këtu"
             value={surveyResponse.feedback}
           />
         </ScrollView>
@@ -239,13 +239,13 @@ const Survey = (props: any) => {
       <Divider color={COLORS.WHITE} width={5} />
       <View style={styles.buttonContainer}>
         <CustomButton
-          title="Cancel"
+          title="Anullo"
           onPress={() => props.navigation.navigate(HOME_SCREEN)}
           borderWidth={1}
           borderColor={COLORS.WHITE}
         />
         <CustomButton
-          title="Submit"
+          title="Ruaj"
           onPress={handleSubmit}
           color={isButtonDisabled ? COLORS.GREY : COLORS.FADED_BLUE}
           disabled={isButtonDisabled}
