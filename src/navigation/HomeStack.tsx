@@ -1,6 +1,7 @@
 import React from "react";
 import { createDrawerNavigator, DrawerContentComponentProps } from "@react-navigation/drawer";
 import {
+  CONVERT_PDF,
   HOME_SCREEN,
   PROFILE_SCREEN,
   RESOURCES_SCREEN,
@@ -20,6 +21,7 @@ import SettingsScreen from "../screens/settingsScreen/SettingsScreen";
 import { Image } from "react-native";
 import Survey from "../screens/surveys/Survey";
 import SubmitSurvey from "../screens/surveys/SubmitSurvey";
+import ConvertPdf from "../screens/surveys/ConvertPdf";
 
 const HomeStack = createDrawerNavigator<HomeStackParamList>();
 
@@ -44,6 +46,11 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
         name={HOME_SCREEN}
         component={HomeScreen}
       />
+       <HomeStack.Screen
+        options={{ title: "Shkarko PDF", headerLeft: () => <BackButton screenName={HOME_SCREEN} navigation={navigation} />}}
+        name={CONVERT_PDF}
+        component={ConvertPdf}
+      />
       <HomeStack.Screen options={{ title: "Informacion" }} name={RESOURCES_SCREEN} component={ResourcesScreen} />
       <HomeStack.Screen
         options={{
@@ -55,7 +62,7 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
         component={Survey}
       />
           <HomeStack.Screen
-        options={{ title: "Sukses" }}
+        options={{ title: "Sukses!", headerLeft: () => <BackButton screenName={HOME_SCREEN} navigation={navigation} /> }}
         name={SUBMIT_SURVEY}
         component={SubmitSurvey}
       />

@@ -10,6 +10,7 @@ import {
  SETTINGS_SCREEN,
  SURVEY_SCREEN,
  SUBMIT_SURVEY,
+ CONVERT_PDF,
 } from "./src/navigation/screenNames";
 
 export type RootStackParamList = {
@@ -43,4 +44,5 @@ export type HomeStackParamList = {
   [SETTINGS_SCREEN]: undefined;
   [SURVEY_SCREEN]: undefined;
   [SUBMIT_SURVEY]: undefined;
+  [CONVERT_PDF]: undefined;
 };

@@ -15,6 +15,11 @@ export default StyleSheet.create({
     alignItems: "center",
     bottom: "15%",
   },
+  buttonPdfView: {
+    justifyContent: "center",
+    alignItems: "center",
+    bottom: "15%",
+  },
   text: {
     lineHeight: 20,
     fontSize: 17,

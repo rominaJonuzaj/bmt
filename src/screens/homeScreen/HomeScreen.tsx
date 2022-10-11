@@ -4,7 +4,7 @@ import styles from "./HomeScreen.styles";
 import Container from "../../components/container/Container";
 import CustomButton from "../../components/buttons/CustomButton";
 import { COLORS } from "../../constants/Colors";
-import { SURVEY_SCREEN } from "../../navigation/screenNames";
+import { CONVERT_PDF, SURVEY_SCREEN } from "../../navigation/screenNames";
 import ExerciseAnimation from "../../components/exerciseAnimation/ExerciseAnimation";
 
 const HomeScreen = (props: any) => {
@@ -15,6 +15,9 @@ const HomeScreen = (props: any) => {
       <Text style={styles.text}>{"Shënojmë të dhënat e sotme! :)"}</Text>
       <View style={styles.buttonView}>
         <CustomButton onPress={() => props.navigation.navigate(SURVEY_SCREEN)} title="Si jeni sot?" color={COLORS.FADED_BLUE} />
+      </View>
+      <View style={styles.buttonPdfView}>
+        <CustomButton onPress={() => props.navigation.navigate(CONVERT_PDF)} title="Shkarkoni PDF" color={COLORS.LIGHT_BLUE} />
       </View>
     </Container>
   );

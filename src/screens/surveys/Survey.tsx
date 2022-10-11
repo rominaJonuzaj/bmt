@@ -8,21 +8,13 @@ import CustomButton from "../../components/buttons/CustomButton";
 import { COLORS } from "../../constants/Colors";
 import { Slider } from "@miblanchard/react-native-slider";
 import { Icon } from "react-native-elements/dist/icons/Icon";
-//import { useCreateSurveyResponseMutation } from "../../graphql/generated";
-//import { GraphqlClientContext } from "../../contexts/GraphqlClientContext";
-//import { FORMAT_DATE } from "../../helpers/convertTimeStampToDate";
 import { ANXIETY_MOOD, DEPRESSED_MOOD, ELEVATED_MOOD, HOURS_SLEEP, IRRITABILITY, NOTES, SHARE_FEEDBACK_TEXT } from "../../constants/Constants";
 import Container from "../../components/container/Container";
 import { HOME_SCREEN, SUBMIT_SURVEY } from "../../navigation/screenNames";
 
 
-
-
 const Survey = (props: any) => {
   // const id = route.params.id;
-  // const surveyName = route.params.surveyName;
-  // const surveyType = route.params.surveyType;
-  // const surveyClosingDate = route.params.closingDate;
   // const client = useContext(GraphqlClientContext);
   // const data = useCreateSurveyResponseMutation(client);
   const trackMarks = Array.from({ length: 24 }, (_, i) => i + 1);
@@ -32,6 +24,7 @@ const Survey = (props: any) => {
     shareFeedback: false,
     feedback: "",
     score: "",
+    description: "",
   });
 
   const handleSliderChange = (value: string) => {
@@ -76,7 +69,7 @@ const Survey = (props: any) => {
         <View><Text>{"Data e sotme: " + date}</Text></View>
         <View style={styles.questions}>
         <Text style={styles.text}>{ "1. " + HOURS_SLEEP}</Text>
-        <View style={styles.sliderContainer}>
+        {/* <View style={styles.sliderContainer}>
           <Text style={styles.value}>{trackMarks[0]}</Text>
           <Slider
             value={+surveyResponse.score}
@@ -100,7 +93,15 @@ const Survey = (props: any) => {
             onChangeText={handleSliderChange}
             keyboardType="number-pad"
           />
-        </View>
+          
+        </View> */}
+         <TextInput
+            multiline
+            style={styles.input}
+            onChangeText={(value) => setSurveyResponse({ ...surveyResponse, description: value })}
+            placeholder=" Shkruaj këtu"
+            value={surveyResponse.description}
+          />
         {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}</View>
         <View style={styles.questions}>
         <Text style={styles.text}>{"2. " + DEPRESSED_MOOD}</Text>

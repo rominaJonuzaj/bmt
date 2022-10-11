@@ -11,6 +11,8 @@ import { withAuthenticator } from 'aws-amplify-react-native';
 import Localei18n from "./src/components/Language/Localei18n";
 
 import { QueryClient, QueryClientProvider } from "react-query";
+import { GraphqlClientProvider } from "./src/contexts/GraphqlClientContext";
+import { UserProvider } from "./src/contexts/UserContext";
 
 Amplify.configure({
   ...config,
@@ -19,8 +21,6 @@ Amplify.configure({
   },
 });
 
-//Amplify.configure(config);
-
 const queryClient = new QueryClient();
 
 function App() {
@@ -28,22 +28,29 @@ function App() {
   const colorScheme = useColorScheme();
 
   if (!isLoadingComplete) {
-    return null;
-  } else {
     return (
       <RootSiblingParent>
-        {/* <SecureStorageProvider>
-          <UserProvider>
-            <GraphqlClientProvider>
-              <QueryClientProvider client={queryClient}> */}
+              <UserProvider>
+              <GraphqlClientProvider>
               <QueryClientProvider client={queryClient}>
               <Localei18n />
                 <Navigation colorScheme={colorScheme} />
                 </QueryClientProvider>
-              {/* </QueryClientProvider>
-            </GraphqlClientProvider>
-          </UserProvider>
-        </SecureStorageProvider> */}
+                </GraphqlClientProvider>
+                </UserProvider>
+      </RootSiblingParent>
+    );
+  } else {
+    return (
+      <RootSiblingParent>
+              <UserProvider>
+              <GraphqlClientProvider>
+              <QueryClientProvider client={queryClient}>
+              <Localei18n />
+                <Navigation colorScheme={colorScheme} />
+                </QueryClientProvider>
+                </GraphqlClientProvider>
+                </UserProvider>
       </RootSiblingParent>
     );
   }
