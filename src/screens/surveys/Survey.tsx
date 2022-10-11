@@ -13,7 +13,7 @@ import { Icon } from "react-native-elements/dist/icons/Icon";
 //import { FORMAT_DATE } from "../../helpers/convertTimeStampToDate";
 import { ANXIETY_MOOD, DEPRESSED_MOOD, ELEVATED_MOOD, HOURS_SLEEP, IRRITABILITY, NOTES, SHARE_FEEDBACK_TEXT } from "../../constants/Constants";
 import Container from "../../components/container/Container";
-import { HOME_SCREEN } from "../../navigation/screenNames";
+import { HOME_SCREEN, SUBMIT_SURVEY } from "../../navigation/screenNames";
 
 
 const Survey = (props: any) => {
@@ -250,7 +250,7 @@ const Survey = (props: any) => {
         />
         <CustomButton
           title="Ruaj"
-          onPress={handleSubmit}
+          onPress={() => props.navigation.navigate(SUBMIT_SURVEY)}
           color={isButtonDisabled ? COLORS.GREY : COLORS.FADED_BLUE}
           disabled={isButtonDisabled}
         />

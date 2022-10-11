@@ -9,6 +9,7 @@ import {
  RESOURCES_SCREEN,
  SETTINGS_SCREEN,
  SURVEY_SCREEN,
+ SUBMIT_SURVEY,
 } from "./src/navigation/screenNames";
 
 export type RootStackParamList = {
@@ -41,5 +42,5 @@ export type HomeStackParamList = {
   [RESOURCES_SCREEN]: undefined;
   [SETTINGS_SCREEN]: undefined;
   [SURVEY_SCREEN]: undefined;
-
+  [SUBMIT_SURVEY]: undefined;
 };

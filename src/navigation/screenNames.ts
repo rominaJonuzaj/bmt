@@ -4,3 +4,4 @@ export const TERMS_AND_CONDITIONS = "TermsAndConditions";
 export const RESOURCES_SCREEN = "ResourcesScreen";
 export const SETTINGS_SCREEN = "SettingsScreen";
 export const SURVEY_SCREEN = "Survey";
+export const SUBMIT_SURVEY = "SubmitSurvey";

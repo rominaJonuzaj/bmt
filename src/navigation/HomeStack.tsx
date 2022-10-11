@@ -5,6 +5,7 @@ import {
   PROFILE_SCREEN,
   RESOURCES_SCREEN,
   SETTINGS_SCREEN,
+  SUBMIT_SURVEY,
   SURVEY_SCREEN,
 } from "./screenNames";
 import { HomeStackParamList } from "../../types";
@@ -18,6 +19,7 @@ import ProfileScreen from "../screens/profileScreen/ProfileScreen";
 import SettingsScreen from "../screens/settingsScreen/SettingsScreen";
 import { Image } from "react-native";
 import Survey from "../screens/surveys/Survey";
+import SubmitSurvey from "../screens/surveys/SubmitSurvey";
 
 const HomeStack = createDrawerNavigator<HomeStackParamList>();
 
@@ -51,6 +53,11 @@ const HomeStackNav = ({ navigation }: { navigation: any }) => {
         }}
         name={SURVEY_SCREEN}
         component={Survey}
+      />
+          <HomeStack.Screen
+        options={{ title: "Sukses" }}
+        name={SUBMIT_SURVEY}
+        component={SubmitSurvey}
       />
       <HomeStack.Screen options={{ title: "Cilësime" }} name={SETTINGS_SCREEN} component={SettingsScreen} />
       <HomeStack.Screen
