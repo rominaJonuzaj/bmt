@@ -4,22 +4,58 @@ import * as Print from 'expo-print';
 import { shareAsync } from 'expo-sharing';
 import CustomButton from '../../components/buttons/CustomButton';
 import { COLORS } from '../../constants/Colors';
+import * as MediaLibrary from "expo-media-library";
+import * as Sharing from "expo-sharing";
 
 const html = `
+<!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
   </head>
-  <body style="text-align: center;">
-    <h1 style="font-size: 50px; font-family: Helvetica Neue; font-weight: normal;">
-      Hello World!
-    </h1>
-    <img
-      src="https://d30j33t1r58ioz.cloudfront.net/static/guides/sdk.png"
-      style="width: 90vw;" />
+  <body>
+  
+  <h2>BMT: Të Dhënat Javore</h2>
+  
+  <table>
+    <tr>
+      <th>Orët e gjumit</th>
+      <th>Luhatjet e Humorit</th>
+      <th>Ankthi</th>
+      <th>Irritimi</th>
+      <th>Depresioni</th>
+    </tr>
+  </table>
+  <br/>
+  <table>
+    <tr>
+      <th>5</th>
+      <th>5</th>
+      <th>5</th>
+      <th>5</th>
+      <th>5</th>
+    </tr>
+  </table>
+  
   </body>
 </html>
-`;
+  `;
 
 export default function ConvertPdf() {
   const [selectedPrinter, setSelectedPrinter] = React.useState(undefined);
@@ -34,11 +70,20 @@ export default function ConvertPdf() {
 
   const printToFile = async () => {
     // On iOS/android prints the given html. On web prints the HTML from the current page.
-    const { uri } = await Print.printToFileAsync({
-      html
-    });
+    try {
+    const { uri } = await Print.printToFileAsync({html});
     console.log('File has been saved to:', uri);
+    if (Platform.OS === "ios") {
     await shareAsync(uri, { UTI: '.pdf', mimeType: 'application/pdf' });
+    }else {
+      const permission = await MediaLibrary.requestPermissionsAsync();
+      if (permission.granted) {
+        await MediaLibrary.createAssetAsync(uri);
+      }
+    } }
+    catch (error) {
+      console.error(error);
+    }
   }
 
   const selectPrinter = async () => {
@@ -47,12 +92,12 @@ export default function ConvertPdf() {
   }
 
   const array = [
-    { company: "Alfreds Futterkiste", contact: "Maria Anders", country: "Germany" },
-    { company: "Centro comercial Moctezuma", contact: "Francisco Chang", country: "Mexico" },
-    { company: "Ernst Handel", contact: "Roland Mendel", country: "Austria" },
-    { company: "Island Trading", contact: "Helen Bennett", country: "UK" },
-    { company: "Laughing Bacchus Winecellars", contact: "Yoshi Tannamuri", country: "Canada" },
-    { company: "Magazzini Alimentari Riuniti", contact: "Giovanni Rovelli", country: "Italy" },
+    { company: "5", contact: "5", country: "5", anxiety: "5", depression: "5" },
+    // { company: "Centro comercial Moctezuma", contact: "Francisco Chang", country: "Mexico" },
+    // { company: "Ernst Handel", contact: "Roland Mendel", country: "Austria" },
+    // { company: "Island Trading", contact: "Helen Bennett", country: "UK" },
+    // { company: "Laughing Bacchus Winecellars", contact: "Yoshi Tannamuri", country: "Canada" },
+    // { company: "Magazzini Alimentari Riuniti", contact: "Giovanni Rovelli", country: "Italy" },
   ]
   const createDynamicTable = () => {
     var table = '';
@@ -63,6 +108,8 @@ export default function ConvertPdf() {
         <td>${item.company}</td>
         <td>${item.contact}</td>
         <td>${item.country}</td>
+        <td>${item.anxiety}</td>
+        <td>${item.depression}</td>
       </tr>
       `
     }
@@ -91,13 +138,15 @@ export default function ConvertPdf() {
       </head>
       <body>
       
-      <h2>HTML Table</h2>
+      <h2>BMT: Të Dhënat Javore</h2>
       
       <table>
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+        <th>Orët e gjumit</th>
+        <th>Luhatjet e Humorit</th>
+        <th>Ankthi</th>
+        <th>Irritimi</th>
+        <th>Depresioni</th>
         </tr>
         ${table}
       </table>
