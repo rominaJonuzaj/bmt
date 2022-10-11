@@ -46,6 +46,9 @@ const Survey = (props: any) => {
     }
   }, [surveyResponse.feedback, surveyResponse.score]);
 
+  const month= new Date().getMonth()+1;
+  const date=month +"/"+new Date().getDate()+"/"+new Date().getFullYear();
+
   const handleSubmit = () => {
     // const inputs = {
     //   surveyId: id,
@@ -68,6 +71,7 @@ const Survey = (props: any) => {
       <ScrollView>
       {/* <Divider color={COLORS.FOREST300} width={5} /> */}
       <View style={styles.surveyContainer}>
+        <View><Text>{"Data e sotme: " + date}</Text></View>
         <View style={styles.questions}>
         <Text style={styles.text}>{ "1. " + HOURS_SLEEP}</Text>
         <View style={styles.sliderContainer}>
