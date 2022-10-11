@@ -4,7 +4,7 @@ import styles from "./SubmitSurvey.style";
 import Container from "../../components/container/Container";
 import CustomButton from "../../components/buttons/CustomButton";
 import { COLORS } from "../../constants/Colors";
-import { HOME_SCREEN, SURVEY_SCREEN } from "../../navigation/screenNames";
+import { HOME_SCREEN } from "../../navigation/screenNames";
 
 const SubmitSurvey = (props: any) => {
 

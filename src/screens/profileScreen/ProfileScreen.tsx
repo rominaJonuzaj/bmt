@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, Image, TouchableOpacity, Linking, Platform } from "react-native";
 import Email from "../../../assets/svgIcons/Email";
 import Phone from "../../../assets/svgIcons/Phone";
@@ -11,7 +11,10 @@ import styles from "./ProfileScreen.styles";
 import { Auth } from 'aws-amplify';
 
 const ProfileScreen = () => {
-
+  // const user = useContext(UserContext);
+  // const fullName = user.name;
+  // const email = user.email;
+  
 //   const logoutUser = async () => {
 //     dispatch({ type: "DELETE_ALL_TOKENS" });
 //   };
