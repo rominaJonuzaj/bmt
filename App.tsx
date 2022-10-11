@@ -10,12 +10,18 @@ import config from "./src/aws-exports";
 import { withAuthenticator } from 'aws-amplify-react-native';
 import Localei18n from "./src/components/Language/Localei18n";
 
+import { QueryClient, QueryClientProvider } from "react-query";
+
 Amplify.configure({
   ...config,
   Analytics: {
     disabled: true,
   },
 });
+
+//Amplify.configure(config);
+
+const queryClient = new QueryClient();
 
 function App() {
   const isLoadingComplete = useCachedResources();
@@ -30,8 +36,10 @@ function App() {
           <UserProvider>
             <GraphqlClientProvider>
               <QueryClientProvider client={queryClient}> */}
+              <QueryClientProvider client={queryClient}>
               <Localei18n />
                 <Navigation colorScheme={colorScheme} />
+                </QueryClientProvider>
               {/* </QueryClientProvider>
             </GraphqlClientProvider>
           </UserProvider>

@@ -16,6 +16,8 @@ import Container from "../../components/container/Container";
 import { HOME_SCREEN, SUBMIT_SURVEY } from "../../navigation/screenNames";
 
 
+
+
 const Survey = (props: any) => {
   // const id = route.params.id;
   // const surveyName = route.params.surveyName;
