@@ -6,10 +6,10 @@ type Survey @model {
   id: ID!
   name: String!
   description: String!
-  sleepScore: Int!
-  depressedScore: Int!
-  moodScore: Int!
-  irritationScore: Int!
-  anxietyScore: Int!
+  sleepScore: String!
+  depressedScore: String!
+  moodScore: String!
+  irritationScore: String!
+  score: Int!
   feedback: String!
 }

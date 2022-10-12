@@ -11,7 +11,7 @@ export const getSurvey = /* GraphQL */ `
       depressedScore
       moodScore
       irritationScore
-      anxietyScore
+      score
       feedback
       createdAt
       updatedAt
@@ -33,7 +33,7 @@ export const listSurveys = /* GraphQL */ `
         depressedScore
         moodScore
         irritationScore
-        anxietyScore
+        score
         feedback
         createdAt
         updatedAt

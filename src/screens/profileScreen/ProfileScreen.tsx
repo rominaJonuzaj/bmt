@@ -31,7 +31,7 @@ const signOut = async () => {
   return (
     <Container style={styles.container}>
       <View style={Platform.OS === "ios" ?  styles.userInfo : styles.userInfoAndroid}>
-        <Text style={styles.h1}>{"Romina a.k.a Dory"}</Text>
+        <Text style={styles.h1}>{"Romina"}</Text>
         {/* <Image source={{ uri: PROFILE_IMAGE_URI + email.toLowerCase() + ".jpg" }} style={styles.image} /> */}
         <Image source={require("../../../assets/images/me.jpg")} style={styles.image}/>
         <View style={Platform.OS === "ios" ? styles.infoContainer : styles.infoContainerAndroid}>

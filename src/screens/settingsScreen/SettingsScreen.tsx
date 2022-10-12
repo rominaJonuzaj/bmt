@@ -51,7 +51,7 @@ const SettingsScreen = () => {
     <Container>
       <View style={styles.container}>
         <View style={styles.switchContainer}>
-          <Text style={styles.TextTitle}>WHAT DO YOU WANT TO TURN OFF?</Text>
+          <Text style={styles.TextTitle}>Cfarë dëshironi të punoni sot?</Text>
           <SwitchButton
             onClick={null}
             isEnabled={null}

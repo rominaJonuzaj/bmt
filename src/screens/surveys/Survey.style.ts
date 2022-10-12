@@ -77,6 +77,10 @@ export default StyleSheet.create({
   },
   text: {
     lineHeight: 20,
-    fontSize: 17,
+    fontSize: 15,
+  },
+  textDate: {
+    lineHeight: 20,
+    fontSize: 18,
   },
 });
